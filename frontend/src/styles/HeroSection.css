@@ -1,0 +1,375 @@
+/* HeroSection.css - Optimized without subtitle */
+.hero-container {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.hero-slides {
+  display: flex;
+  width: 500%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hero-slide {
+  width: 20%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.slide-1 {
+  background-image: url('../../public/images/Hero-section/Living/Living8.jpg');
+}
+
+.slide-2 {
+  background-image: url('../../public/images/Hero-section/Kitchen/Kitchen8.jpg');
+}
+
+.slide-3 {
+  background-image: url('../../public/images/Hero-section/Bedroom/Bedroom1.jpg');
+}
+
+.slide-4 {
+  background-image: url('../../public/images/Hero-section/Wardrobe/Wardrobe3.jpg');
+}
+
+.slide-5 {
+  background-image: url('../../public/images/Hero-section/Office/Office4.jpg');
+}
+
+.slide-content {
+  max-width: 700px;
+  margin-left: 10%;
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0;
+  color: white;
+  line-height: 1.2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.language-badges {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.language-badge {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.language-badge:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  border-color: white;
+}
+
+/* Custom checkmark using CSS */
+.checkmark {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  display: inline-block;
+}
+
+.checkmark::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 12px;
+  height: 6px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: translateY(-60%) rotate(-45deg);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.btn-hero {
+  padding: 16px 35px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-gold), #ff9500);
+  color: #000;
+  box-shadow: 0 6px 20px rgba(249, 199, 79, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #ff9500, var(--accent-gold));
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(249, 199, 79, 0.4);
+  color: #000;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.hero-note {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 12px 20px;
+  border-radius: 25px;
+  max-width: fit-content;
+  backdrop-filter: blur(5px);
+  margin-top: 0.5rem;
+}
+
+.star {
+  color: var(--accent-gold);
+  font-size: 1.4rem;
+  animation: pulse 2s infinite;
+}
+
+/* Navigation Arrows */
+.nav-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 4;
+  transform: translateY(-50%);
+}
+
+.arrow {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  backdrop-filter: blur(10px);
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+  border-color: white;
+}
+
+/* Slide Indicators */
+.slide-indicators {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 5;
+}
+
+.indicator {
+  width: 70px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.indicator-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: var(--accent-gold);
+  animation: progress 5s linear infinite;
+}
+
+.indicator.active .indicator-progress {
+  animation: progress 5s linear infinite;
+}
+
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+/* Fade effects */
+.fade-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent);
+  z-index: 1;
+}
+
+.fade-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-container {
+    height: 70vh;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .slide-content {
+    margin-left: 5%;
+    padding-right: 5%;
+    max-width: 90%;
+    padding-top: 1.5rem;
+    gap: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 0.5rem 0;
+  }
+
+  .arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .nav-arrows {
+    padding: 0 20px;
+  }
+  
+  .indicator {
+    width: 50px;
+  }
+  
+  .language-badges {
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    height: 60vh;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .language-badges {
+    gap: 8px;
+  }
+  
+  .language-badge {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+  
+  .btn-hero {
+    padding: 14px 28px;
+    font-size: 0.9rem;
+  }
+  
+  .hero-note {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+  
+  .slide-content {
+    padding-top: 1rem;
+    gap: 0.75rem;
+  }
+}

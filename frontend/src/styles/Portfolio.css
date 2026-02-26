@@ -1,0 +1,530 @@
+/* Portfolio.css - Updated to match Offerings.css style */
+:root {
+  --primary: #2a574d;
+  --primary-light: #3b7a6e;
+  --secondary: #e6b89c;
+  --accent: #d4a574;
+  --light: #f8f5f2;
+  --dark: #333333;
+  --gray: #777777;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --radius: 8px;
+  --transition: all 0.3s ease;
+  --white: #ffffff;
+  --black: #000000;
+  --dark-overlay: rgba(0, 0, 0, 0.92);
+  --light-overlay: rgba(255, 255, 255, 0.1);
+}
+
+/* Portfolio Page - Updated background */
+.portfolio-page {
+  min-height: 100vh;
+  background: var(--white);
+  padding: 80px 0; /* Increased to match offerings spacing */
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Loading State - Updated colors */
+.portfolio-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(42, 87, 77, 0.1);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.portfolio-loading p {
+  color: var(--gray);
+  font-size: 1rem;
+}
+
+/* Header Section - Updated to match offerings typography */
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-title {
+  font-size: 2.2rem; /* Matched offerings h2 size */
+  font-weight: 700; /* Changed from 300 to 700 */
+  color: var(--primary); /* Changed to primary color */
+  margin-bottom: 1rem; /* Matched offerings spacing */
+  letter-spacing: normal; /* Removed negative letter-spacing */
+}
+
+.portfolio-subtitle {
+  font-size: 1.1rem; /* Matched offerings paragraph size */
+  color: var(--gray); /* Changed to gray color */
+  line-height: 1.7; /* Increased from 1.6 to 1.7 */
+  font-weight: 400;
+  margin: 0;
+  max-width: 700px; /* Added max-width like offerings */
+}
+
+/* Projects Grid - Updated card styling */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: var(--white);
+  border-radius: var(--radius); /* Added border radius */
+  overflow: hidden;
+  transition: var(--transition); /* Using consistent transition */
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow); /* Added subtle shadow like offerings */
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Increased from -4px to -10px */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); /* Matched offerings hover shadow */
+}
+
+.project-image-container {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0; /* Rounded top corners */
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-type {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--white);
+  padding: 8px 15px; /* Slightly increased padding */
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--dark); /* Changed to dark color */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 20px; /* Added rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+  border-radius: var(--radius) var(--radius) 0 0; /* Rounded top corners */
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.view-gallery-btn {
+  background: var(--primary); /* Changed from transparent to primary */
+  color: var(--white);
+  border: 2px solid var(--primary); /* Changed border color */
+  padding: 12px 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+  border-radius: var(--radius); /* Added border radius */
+}
+
+.view-gallery-btn:hover {
+  background: var(--primary-light); /* Changed to primary-light on hover */
+  border-color: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.project-content {
+  padding: 25px;
+}
+
+.project-title {
+  font-size: 1.5rem; /* Increased from 1.3rem to match offerings */
+  font-weight: 700; /* Changed from 400 to 700 like offerings */
+  color: var(--dark); /* Changed to dark color */
+  margin-bottom: 15px; /* Increased from 10px */
+  letter-spacing: normal; /* Removed negative letter-spacing */
+  line-height: 1.3; /* Added line-height */
+}
+
+.project-description {
+  color: var(--gray); /* Changed to gray color */
+  line-height: 1.7; /* Increased from 1.6 to match offerings */
+  font-size: 1.05rem; /* Increased from 0.95rem */
+  margin: 0;
+}
+
+/* Gallery Popup - keeping original dark style but updating some elements */
+.gallery-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--dark-overlay);
+  backdrop-filter: blur(20px);
+  animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.popup-container {
+  position: relative;
+  width: 90%;
+  max-width: 1400px;
+  height: 90vh;
+  background: transparent;
+  animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close Button - updated to match offerings colors */
+.popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: rgba(42, 87, 77, 0.1); /* Changed to primary transparent */
+  border: none;
+  border-radius: 50%;
+  color: var(--white);
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+.popup-close:hover {
+  background: rgba(42, 87, 77, 0.2); /* Changed to primary-light */
+  transform: rotate(90deg);
+}
+
+.popup-close svg {
+  stroke: var(--white);
+}
+
+/* Navigation Arrows - updated to match offerings colors */
+.popup-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(42, 87, 77, 0.1); /* Changed to primary transparent */
+  border: none;
+  border-radius: 50%;
+  color: var(--white);
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+.popup-nav:hover {
+  background: rgba(42, 87, 77, 0.2); /* Changed to primary-light */
+  transform: translateY(-50%) scale(1.1);
+}
+
+.popup-nav-prev {
+  left: 20px;
+}
+
+.popup-nav-next {
+  right: 20px;
+}
+
+.popup-nav svg {
+  stroke: var(--white);
+  stroke-width: 2;
+}
+
+/* Main Image */
+.popup-image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.popup-main-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius); /* Added border radius */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: imageFade 0.5s ease;
+}
+
+@keyframes imageFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Image Counter - updated colors */
+.popup-counter {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(42, 87, 77, 0.6); /* Changed to primary transparent */
+  color: var(--white);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+}
+
+/* Project Title - updated colors */
+.popup-title {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 700; /* Changed from 400 to 700 */
+  letter-spacing: 1px;
+  text-align: center;
+  white-space: nowrap;
+  background: rgba(42, 87, 77, 0.4); /* Changed to primary transparent */
+  padding: 8px 20px;
+  border-radius: var(--radius); /* Added border radius */
+  backdrop-filter: blur(10px);
+}
+
+/* Thumbnails - updated colors */
+.popup-thumbnail {
+  flex: 0 0 auto;
+  width: 70px;
+  height: 50px;
+  border: none;
+  border-radius: var(--radius); /* Added border radius */
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+  transition: var(--transition);
+  border: 2px solid transparent;
+  opacity: 0.6;
+}
+
+.popup-thumbnail:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+.popup-thumbnail.active {
+  border-color: var(--primary); /* Changed to primary color */
+  opacity: 1;
+}
+
+/* Responsive Design - updated breakpoints to match offerings */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .portfolio-title {
+    font-size: 2rem; /* Matched offerings breakpoint size */
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-page {
+    padding: 60px 0; /* Matched offerings mobile padding */
+  }
+  
+  .portfolio-title {
+    font-size: 1.8rem; /* Matched offerings mobile size */
+  }
+  
+  .portfolio-subtitle {
+    font-size: 1rem; /* Matched offerings mobile size */
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .project-image-container {
+    height: 240px;
+  }
+  
+  /* Popup Responsive */
+  .popup-container {
+    width: 95%;
+    height: 95vh;
+  }
+  
+  .popup-close {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .popup-nav {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .popup-nav-prev {
+    left: 10px;
+  }
+  
+  .popup-nav-next {
+    right: 10px;
+  }
+  
+  .popup-counter {
+    bottom: 100px;
+    font-size: 0.8rem;
+  }
+  
+  .popup-title {
+    bottom: 70px;
+    font-size: 1rem;
+    white-space: normal;
+    max-width: 80%;
+    text-align: center;
+  }
+  
+  .popup-thumbnail {
+    width: 60px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 576px) { /* Added 576px breakpoint to match offerings */
+  .portfolio-container {
+    padding: 0 15px;
+  }
+  
+  .portfolio-title {
+    font-size: 1.8rem; /* Matched offerings mobile size */
+  }
+  
+  .project-content {
+    padding: 20px;
+  }
+  
+  .project-title {
+    font-size: 1.3rem; /* Matched offerings mobile size */
+  }
+  
+  .project-description {
+    font-size: 1rem; /* Matched offerings mobile size */
+  }
+  
+  .popup-thumbnails {
+    gap: 6px;
+  }
+  
+  .popup-thumbnail {
+    width: 50px;
+    height: 40px;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for thumbnails */
+.popup-thumbnails::-webkit-scrollbar {
+  height: 4px;
+}
+
+.popup-thumbnails::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.popup-thumbnails::-webkit-scrollbar-thumb {
+  background: rgba(42, 87, 77, 0.3); /* Changed to primary transparent */
+  border-radius: 2px;
+}

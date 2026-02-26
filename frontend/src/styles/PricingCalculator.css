@@ -1,0 +1,229 @@
+/* PricingCalculator.css */
+.pricing-header {
+  background: linear-gradient(135deg, #2a574d 0%, #3b7a6e 100%); /* Green gradient */
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 2.8rem; /* Adjusted font size */
+  margin-bottom: 1.2rem;
+  font-weight: 700; /* Your weight from HTML */
+}
+
+.subtitle {
+  font-size: 1.2rem; /* Adjusted font size */
+  margin-bottom: 3rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.project-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 8px; /* Your radius from HTML */
+  padding: 2.5rem;
+  text-align: center;
+  color: #777777; /* Your gray color */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Your shadow */
+  transition: all 0.3s ease; /* Your transition */
+  cursor: pointer;
+  border: 2px solid transparent; /* Slightly thinner border */
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px; /* Thinner line */
+  background: linear-gradient(90deg, #2a574d, #3b7a6e); /* Green gradient */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.project-card.active {
+  border-color: #2a574d; /* Green border */
+  background: #f8f5f2; /* Your light color */
+}
+
+.project-card.active::before {
+  opacity: 1;
+}
+
+.project-icon {
+  font-size: 3rem; /* Slightly smaller */
+  color: #2a574d; /* Green */
+  margin-bottom: 1.5rem;
+  background: rgba(42, 87, 77, 0.1); /* Green with opacity */
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-title {
+  font-size: 1.5rem; /* Your step-title size */
+  margin-bottom: 1rem;
+  color: #333333; /* Your dark color */
+  font-weight: 700; /* Your weight */
+}
+
+.project-description {
+  color: #777777; /* Your gray color */
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  font-size: 1rem; /* Your step-description size */
+}
+
+.btn-calculate {
+  background: #2a574d; /* Green */
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 8px; /* Your radius */
+  font-weight: 600; /* Your weight */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Your transition */
+  box-shadow: 0 4px 12px rgba(42, 87, 77, 0.2); /* Green shadow */
+}
+
+.btn-calculate:hover {
+  background: #3b7a6e; /* Light green */
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(42, 87, 77, 0.3); /* Green shadow */
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: 100px 0;
+  background: #f8f5f2; /* Your light color */
+}
+
+.benefits-section h3 {
+  font-size: 2.2rem;
+  font-weight: 700; /* Your weight */
+  color: #333333; /* Your dark color */
+  margin-bottom: 30px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-list li {
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  color: #777777; /* Your gray color */
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.benefits-list li i {
+  color: #2a574d; /* Green */
+  margin-top: 4px;
+  font-size: 1.2rem;
+}
+
+.benefits-list li div {
+  flex: 1;
+}
+
+.benefits-list li strong {
+  color: #333333; /* Your dark color */
+}
+
+.feature-highlight {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 8px; /* Your radius */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Your shadow */
+}
+
+.feature-highlight h4 {
+  color: #333333; /* Your dark color */
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 700; /* Your weight */
+}
+
+.feature-highlight p {
+  color: #777777; /* Your gray color */
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.tech-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tech-badge {
+  background: rgba(42, 87, 77, 0.1); /* Green with opacity */
+  color: #2a574d; /* Green */
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid rgba(42, 87, 77, 0.2); /* Green border */
+}
+
+footer {
+  background: #333333; /* Your dark color */
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 2.2rem; /* Adjusted for mobile */
+  }
+  
+  .project-types {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 3rem auto 0;
+  }
+  
+  .benefits-section h3 {
+    font-size: 1.8rem;
+  }
+  
+  .tech-features {
+    justify-content: center;
+  }
+}

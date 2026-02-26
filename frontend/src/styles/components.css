@@ -1,0 +1,192 @@
+/* components.css - Shared component styles - Updated for white theme */
+
+/* Card Styles */
+.card {
+  background: white;
+  border: 1px solid #e9ecef;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  border-color: var(--prime-blue);
+}
+
+/* Navigation Styles */
+.navbar {
+  background: white !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--prime-blue) !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: var(--text-color) !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: var(--border-radius);
+  margin: 0 0.2rem;
+}
+
+.nav-link:hover {
+  color: #2a574d !important;
+  background: rgba(67, 97, 238, 0.05);
+}
+
+.nav-link.active {
+  color: #2a574d !important;
+  background: rgba(67, 97, 238, 0.1);
+  font-weight: 600;
+}
+
+/* Footer Styles */
+footer {
+  background: var(--prime-nav-bg);
+  margin-top: auto;
+  padding: 4rem 0 2rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-icons a {
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.social-icons a:hover {
+  background: var(--prime-blue);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(67, 97, 238, 0.2);
+}
+
+/* Loading Spinner */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  color: var(--prime-blue);
+}
+
+/* Alert Styles */
+.alert {
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 1.2rem 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.alert-info {
+  background: rgba(67, 97, 238, 0.1);
+  color: var(--prime-blue);
+  border-left: 4px solid var(--prime-blue);
+}
+
+/* Badge Styles */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.5em 0.8em;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-primary {
+  background: linear-gradient(135deg, var(--prime-blue), var(--prime-light-blue));
+  color: white;
+}
+
+.badge-success {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .navbar-nav {
+    background: white;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 1rem;
+  }
+  
+  .nav-link {
+    padding: 0.8rem 1rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  footer {
+    padding: 3rem 0 1.5rem;
+  }
+}
+/* Fix for conflicting container classes */
+.container-global {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Clear conflicting styles from other files */
+.container {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+}
+
+/* Ensure consistent box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+/* Fix for footer alignment */
+.livepace-footer .footer-container,
+.about-page .container,
+.offerings-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
