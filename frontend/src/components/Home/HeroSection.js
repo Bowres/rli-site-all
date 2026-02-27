@@ -22,7 +22,6 @@ const HeroSection = () => {
         { text: 'BOOK FREE CONSULTATION', href: '/consultation' },
         { text: 'EXPLORE DESIGNS', href: '/design-ideas' }
       ],
-      note: 'AWARD-WINNING DESIGN STUDIO'
     },
     {
       background: 'slide-2',
@@ -185,10 +184,10 @@ const HeroSection = () => {
                   ))}
                 </div>
 
-                <div className="hero-note">
+                {/* <div className="hero-note">
                   <span className="star">★</span>
                   {slide.note}
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
@@ -210,7 +209,6 @@ const HeroSection = () => {
       <WhyChooseService />
       <Offerings />
       <PricingCalculator />
-      {/* <DesignMagazine /> */}
       <Consultation />
     </>
   );
