@@ -412,7 +412,10 @@ const DesignIdeas = () => {
           <div className="cta-content">
             <h2>Love an idea? Let's make it yours!</h2>
             <p>Our designers can customize any concept to match your space and style</p>
-            <button className="cta-button">BOOK FREE CONSULTATION</button>
+            {/* <button className="cta-button">BOOK FREE CONSULTATION</button> */}
+            <a href="/consultation" className="cta-button">
+              <span>BOOK FREE CONSULTATION</span>
+            </a>
           </div>
         </section>
       </div>

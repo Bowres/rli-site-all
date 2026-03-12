@@ -4,8 +4,8 @@ import Footer from './Footer';
 import '../../../src/styles/globals.css';
 
 const Layout = ({ children }) => {
-  const whatsappNumber = "919876543210"; // Update with your number (remove + and 0)
-  const phoneNumber = "+919876543210"; // Update with your number
+  const whatsappNumber = "919941874830"; // Update with your number (remove + and 0)
+  const phoneNumber = "+919941874830"; // Update with your number
 
   const handleWhatsAppClick = () => {
     window.open(`https://wa.me/${whatsappNumber}`, '_blank');

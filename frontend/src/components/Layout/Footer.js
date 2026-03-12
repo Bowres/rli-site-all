@@ -24,11 +24,11 @@ const Footer = () => {
             <div className="footer-contact">
               <div className="contact-item">
                 <i className="fas fa-phone-alt"></i>
-                <span>+91 98765 43210</span>
+                <span>+91 9941874830</span>
               </div>
               <div className="contact-item">
                 <i className="fas fa-envelope"></i>
-                <span>rlihtechniteriors@gmail.com</span>
+                <span>rlhitechinteriors@gmail.com</span>
               </div>
               <div className="contact-item">
                 <i className="fas fa-map-marker-alt"></i>
@@ -36,20 +36,20 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="footer-social">
+            {/*<div className="footer-social">
               <a href="#" className="social-link" aria-label="Instagram">
                 <i className="fab fa-instagram"></i>
               </a>
               <a href="#" className="social-link" aria-label="Facebook">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              {/* <a href="#" className="social-link" aria-label="Pinterest">
+               <a href="#" className="social-link" aria-label="Pinterest">
                 <i className="fab fa-pinterest"></i>
               </a>
               <a href="#" className="social-link" aria-label="YouTube">
                 <i className="fab fa-youtube"></i>
-              </a> */}
-            </div>
+              </a> 
+            </div> */}
           </div>
 
           {/* Services Section */}

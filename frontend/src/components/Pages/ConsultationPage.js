@@ -414,7 +414,7 @@ const ConsultationPage = () => {
                   </div>
                   <div className="contact-content">
                     <h4>Call Us</h4>
-                    <p>+91 98765 43210</p>
+                    <p>+91 9941874830</p>
                   </div>
                 </li>
                 
@@ -423,7 +423,7 @@ const ConsultationPage = () => {
                     <i className="fab fa-whatsapp"></i>
                   </div>
                   <div className="contact-content">
-                    <a href="https://wa.me/919876543210" className="whatsapp-link" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/919941874830" className="whatsapp-link" target="_blank" rel="noopener noreferrer">
                       WhatsApp Chat
                     </a>
                   </div>
@@ -435,7 +435,7 @@ const ConsultationPage = () => {
                   </div>
                   <div className="contact-content">
                     <h4>Email Us</h4>
-                    <a href="mailto:info@livepace.com" className="email-link">info@livepace.com</a>
+                    <a href="mailto:rlhitechinteriors@gmail.com" className="email-link">rlhitechinteriors@gmail.com</a>
                   </div>
                 </li>
               </ul>
