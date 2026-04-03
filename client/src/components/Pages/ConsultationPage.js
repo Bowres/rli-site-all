@@ -15,6 +15,9 @@ const ConsultationPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [toast, setToast] = useState({ show: false, message: '', type: '' });
 
+  // Get API URL from environment variables
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
   const projectTypes = [
     'Residential Interior',
     'Commercial Space',
@@ -108,7 +111,7 @@ const ConsultationPage = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/consultation', {
+        const response = await fetch(`${API_URL}/api/consultation`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
