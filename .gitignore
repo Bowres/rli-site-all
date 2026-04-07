@@ -5,7 +5,7 @@
 /client/package-lock.json
 
 # builds
-/client/build
+#/client/build
 /dist
 
 # env files
