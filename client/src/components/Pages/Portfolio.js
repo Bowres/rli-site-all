@@ -35,7 +35,7 @@ const Portfolio = () => {
             '/images/portfolio/living-room/contemporary/L14.jpg',
             '/images/portfolio/living-room/contemporary/L15.jpg',
             '/images/portfolio/living-room/contemporary/L16.jpg',
-            '/images/portfolio/wardrobe/custom-wardrobe/w1.jpg',
+            '/images/portfolio/wardrobe/custom-wardrobe/W1.jpg',
             '/images/portfolio/kitchen/modern-kitchen/K1.jpg',
             '/images/portfolio/kitchen/modern-kitchen/K2.jpg',
             '/images/portfolio/kitchen/modern-kitchen/K3.jpg',
@@ -142,11 +142,11 @@ const Portfolio = () => {
           id: 6,
           title: 'Custom Wardrobe Design',
           type: 'Wardrobe',
-          image: '/images/portfolio/wardrobe/custom-wardrobe/w1.jpg',
+          image: '/images/portfolio/wardrobe/custom-wardrobe/W1.jpg',
           category: 'wardrobe',
           description: 'Custom-built wardrobe with smart storage solutions and premium finishes.',
           images: [
-              '/images/portfolio/wardrobe/custom-wardrobe/w1.jpg'
+              '/images/portfolio/wardrobe/custom-wardrobe/W1.jpg'
           ]
         }
       ];
